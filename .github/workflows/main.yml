@@ -1,4 +1,4 @@
-name: Feature workflow
+name: Main workflow
 
 on:
   push:
