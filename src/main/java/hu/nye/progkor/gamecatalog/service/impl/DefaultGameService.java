@@ -7,6 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+/**
+ * Default game servicem.
+ */
 @Service
 public class DefaultGameService implements GameService {
     private final Repository<Game, Long> gameRepository;
@@ -17,7 +21,7 @@ public class DefaultGameService implements GameService {
     }
 
     @Override
-    public Game createGame(Game game){
+    public Game createGame(Game game) {
         return gameRepository.save(game);
     }
 
@@ -27,7 +31,7 @@ public class DefaultGameService implements GameService {
     }
 
     @Override
-    public List<Game> retrieveAllGame() {
+    public List<Game> retrieveAllGames() {
         return gameRepository.getAll();
     }
 
@@ -37,7 +41,7 @@ public class DefaultGameService implements GameService {
     }
 
     @Override
-    public void deleteGameByID(Long id) {
-        gameRepository.deleteByID(id);
+    public void deleteGameById(Long id) {
+        gameRepository.deleteById(id);
     }
 }

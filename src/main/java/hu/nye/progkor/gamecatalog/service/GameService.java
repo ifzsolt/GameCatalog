@@ -4,10 +4,17 @@ import hu.nye.progkor.gamecatalog.data.model.Game;
 
 import java.util.List;
 
+/**
+ * Game service repository.
+ */
 public interface GameService {
     Game createGame(Game game);
+
     Game retrieveGameById(Long id);
-    List<Game> retrieveAllGame();
+
+    List<Game> retrieveAllGames();
+
     Game updateGame(Game game);
-    void deleteGameByID(Long id);
+
+    void deleteGameById(Long id);
 }
